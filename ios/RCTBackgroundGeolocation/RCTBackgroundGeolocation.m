@@ -7,15 +7,15 @@
 //
 
 #import "RCTBackgroundGeolocation.h"
-#if __has_include("RCTLog.h")
-#import "RCTLog.h"
-#else
+#if __has_include(<React/RCTLog.h>)
 #import <React/RCTLog.h>
-#endif
-#if __has_include("RCTEventDispatcher.h")
-#import "RCTEventDispatcher.h"
 #else
+#import "RCTLog.h"
+#endif
+#if __has_include(<React/RCTEventDispatcher.h>)
 #import <React/RCTEventDispatcher.h>
+#else
+#import "RCTEventDispatcher.h"
 #endif
 #import "Logging.h"
 
